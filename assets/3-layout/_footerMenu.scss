@@ -1,0 +1,28 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	font-size: 11px;
+	text-transform: uppercase;
+	background-color: $linear-gradient;
+	padding: 40px 20px;
+	color: rgba(255, 255, 255, 0.7);
+
+	p {
+		margin: 0;
+	}
+
+	&__menu > li {
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+
+		& > a {
+			color: inherit;
+			transition: color .2s ease;
+
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}

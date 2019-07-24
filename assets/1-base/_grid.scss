@@ -1,0 +1,53 @@
+.dflex{
+    display: flex
+}
+
+.align{
+    &--items{
+        &__center{
+            align-items: center
+        }
+        &__start{
+            align-items: flex-start
+        }
+        &__end{
+            align-items: flex-end
+        }
+    }
+    &--self{
+        &__center{
+            align-self: center
+        }
+        &__start{
+            align-self: flex-start
+        }
+        &__end{
+            align-self: flex-end
+        }
+    }
+}
+
+.justify{
+    &--content{
+        &__center{
+            justify-content: center
+        }
+        &__start{
+            justify-content: flex-start
+        }
+        &__end{
+            justify-content: flex-end
+        }
+    }
+    &--self{
+        &__center{
+            justify-self: center
+        }
+        &__start{
+            justify-self: flex-start
+        }
+        &__end{
+            justify-self: flex-end
+        }
+    }
+}
