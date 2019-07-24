@@ -24,7 +24,7 @@
     background-position: center center;
 	transform: scaleY(0);
 	transform-origin: top;
-
+	overflow-y: auto;
     &__heading {
 		flex-basis: 100%;
 		margin-bottom: 40px;
