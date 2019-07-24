@@ -6,21 +6,9 @@
             <h4 class="float-menu__heading">Categories</h4>
 
             <ul class="menu list" id="menu">
-                <li>
+                <li v-for="(menu, index) in category" :key="index">
                     <a href="" 
-                       data-background="https://images.unsplash.com/photo-1480779687977-36af2e48d276?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=70">Photography</a>
-                </li>
-                <li>
-                    <a href=""
-                       data-background="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=70">Videography</a>
-                </li>
-                <li>
-                    <a href=""
-                       data-background="https://images.unsplash.com/photo-1505682732560-497f376018e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=70">Fashion</a>
-                </li>
-                <li>
-                    <a href=""
-                       data-background="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=70">Food</a>
+                       :data-background="menu.image">{{menu.name}}</a>
                 </li>
             </ul>
         </menu>
@@ -34,7 +22,13 @@
 </template>
 
 <script>
+import { category } from '../../assets/dummy/category'
 export default {
+  data () {
+    return {
+      category
+    }
+  },
   mounted(){
     const listMenu = document.querySelectorAll('.menu li a')
     const floatMenu = document.getElementById('float-menu')
@@ -63,7 +57,8 @@ export default {
       if (menuIsOpen) {
         TweenMax.to(floatMenu, 1, 
           {
-            y: `-${windowHeight}`, 
+            y: `-${windowHeight}`,
+            scaleY: '0', 
             ease: Power4.easeInOut,
             onComplete: switchMenuStat
           }
@@ -71,7 +66,8 @@ export default {
       }else{
         TweenMax.to(floatMenu, 1, 
           {
-            y: '0', 
+            y: '0',
+            scaleY: '1',
             ease: Power4.easeInOut,
             onComplete: switchMenuStat
           }
