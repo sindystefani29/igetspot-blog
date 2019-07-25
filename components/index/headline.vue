@@ -6,8 +6,8 @@
           class="headline--image"
         />
         <div class="headline--content">
-            <nuxt-link to="detail" class="headline--content__category">{{item.category}}</nuxt-link>
-            <nuxt-link to="detail" class="headline--content__title"><h2>{{item.title}}</h2></nuxt-link>
+            <nuxt-link :to="item.category" class="headline--content__category">{{item.category}}</nuxt-link>
+            <nuxt-link :to="item.slug" class="headline--content__title"><h2>{{item.title}}</h2></nuxt-link>
             <ul class="dflex">
                 <li>{{item.author}}</li>
                 <li>|</li>
