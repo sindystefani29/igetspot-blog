@@ -1,16 +1,29 @@
-.headline{
-    &--image,&--content{
-        flex: 0 0 50%;
+.latest{
+    margin-left: -1em;
+    margin-right: -1em;
+    &--title{
+        h3{
+            margin-top: 3em;
+        }
+    }
+    &--card{
+        width: 25%;
+        flex-direction: column;
+        height: auto;
+        padding: 1em;
+        margin-bottom: 20px;
+    }
+    &--image{
         position: relative;
     }
     &--content{
-        padding: 30px 50px;
+        margin-top: 10px;
         &__category{
             text-transform: uppercase;
-            letter-spacing: .5px;
+            letter-spacing: 1px;
             color: $blue;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 12px;
             &:hover{
                 text-decoration: underline;
             }
@@ -19,14 +32,15 @@
             font-family: "DM Serif", sans-serif;
             color: $black;
             transition: all .3s ease;
-            h2{
-                font-size: 35px;
-            }
             &:hover{
                 color: $blue;
             }
+            h3{
+                margin: 10px 0 5px;
+            }
         }
         ul {
+            margin: 0;
             li{
                 color: $grey;
                 font-size: 12px;
@@ -35,6 +49,13 @@
                     margin: 0 4px;
                 }
             }
+        }
+        p{
+            color: $grey;
+            font-family: "DM Serif", sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+            margin-top: 15px;
         }
     }
 }
